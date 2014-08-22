@@ -18,7 +18,7 @@
   margin: 30px 0;
   padding:7px;
   font-size: 18px;
-  border: 2px dashed grey;
+  border: 1px dashed #f5f5f5;
   box-shadow: none;
   --webkit-box-shadow : none;
 }
@@ -29,7 +29,7 @@
 }
 
 #note[contenteditable=false]{
-  background: #eee;
+  background: #efefef;
 }
 
 #centered {

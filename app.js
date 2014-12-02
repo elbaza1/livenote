@@ -124,10 +124,10 @@ app.get('/:id', function (req, res) {
   } else if (req.params.id.length == 16){
     var clientId = parseInt(req.params.id.substring(5),16);
   } else {
-    res.redirect(302,"http://www.livenote.org");
+    res.redirect(302,"/");
   }
   if(isNaN(clientId) || !/^[0-9a-z]+$/.test(clientId)){
-    res.redirect(302,"http://www.livenote.org");
+    res.redirect(302,"/");
   } else if(clientId < serverId+30000 && clientId > serverId-600000){
     res.sendfile(__dirname + '/notes.html');
   } else if(clientId < serverId){
@@ -135,11 +135,11 @@ app.get('/:id', function (req, res) {
         if(row){
           res.sendfile(__dirname + '/notes.html');
         } else {
-          res.redirect(302,"http://www.livenote.org");
+          res.redirect(302,"/");
         }
     });
   } else {
-    res.redirect(302,"http://www.livenote.org");
+    res.redirect(302,"/");
   }
 });
 

@@ -108,13 +108,13 @@ io.on('connection', function (socket) {
 });
 
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 app.get('/favicon.ico', function (req, res) {
-  res.sendfile(__dirname + '/favicon.ico');
+  res.sendFile(__dirname + '/favicon.ico');
 });
 app.get('/terms', function (req, res) {
-  res.sendfile(__dirname + '/terms.html');
+  res.sendFile(__dirname + '/terms.html');
 });
 
 app.get('/:id', function (req, res) {
@@ -129,11 +129,11 @@ app.get('/:id', function (req, res) {
   if(isNaN(clientId) || !/^[0-9a-z]+$/.test(clientId)){
     res.redirect(302,"/");
   } else if(clientId < serverId+30000 && clientId > serverId-600000){
-    res.sendfile(__dirname + '/notes.html');
+    res.sendFile(__dirname + '/notes.html');
   } else if(clientId < serverId){
     livenote.db.get("SELECT id,note FROM notes WHERE id = ?",req.params.id,function(err,row){
         if(row){
-          res.sendfile(__dirname + '/notes.html');
+          res.sendFile(__dirname + '/notes.html');
         } else {
           res.redirect(302,"/");
         }

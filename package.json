@@ -24,10 +24,10 @@
   },
 
   "dependencies": {
-    "express": "~4.10",
+    "express": "~4.x",
     "socket.io":">= 1.0.2",
-    "sqlite3":"~3.0",
-    "compression":"~1.2"
+    "sqlite3":"~3.x",
+    "compression":"~1.6"
   },
   "devDependencies": {},
   "bundleDependencies": [],

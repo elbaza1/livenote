@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
 
 var livenote = {
 
-  port : process.env.OPENSHIFT_NODEJS_PORT || 8000,
+  port : process.env.OPENSHIFT_NODEJS_PORT || 9090,
 
   ip : process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1",
 
@@ -152,6 +152,3 @@ String.prototype.insert = function (index, string) {
   else
     return string + this;
 };
-
-
-

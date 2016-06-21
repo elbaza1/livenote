@@ -4,11 +4,11 @@ FROM alpine:3.4
 RUN apk add --update nodejs
 
 # Install app dependencies
-COPY package.json /src/package.json
-RUN cd /src; npm install
+ADD .
+RUN npm install
 
 # Bundle app source
-COPY . /src
+# COPY . /
 
 EXPOSE  9090
-CMD ["node", "/src/app.js"]
+CMD ["node", "app.js"]

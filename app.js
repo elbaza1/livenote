@@ -33,7 +33,7 @@ var livenote = {
 
 livenote.db = new sqlite3.Database(livenote.databaseLoc);
 
-server.listen(livenote.port, livenote.ip);
+server.listen(livenote.port);
 
 livenote.db.run("CREATE TABLE notes (id TEXT PRIMARY KEY, note TEXT, updateTime INTEGER)",function(err){
   //console.log(err);

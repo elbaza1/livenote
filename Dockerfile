@@ -11,4 +11,4 @@ RUN cd /src; npm install
 COPY . /src
 
 EXPOSE  9090
-CMD ["node", "/src/index.js"]
+CMD ["node", "/src/app.js"]
